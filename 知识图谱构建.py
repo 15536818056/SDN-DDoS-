@@ -17,7 +17,7 @@ class Create_Neo(object):
         with open(self.data_dir,'r',encoding='utf-8') as f:
             reader=csv.reader(f)
             for item in reader:
-                #第一行的标签不是咱们需要的内容，line_num表示文件的第几行
+                #过滤掉第一行，line_num表示文件的第几行
                 if reader.line_num==1:
                     continue
                 print("当前行数：",reader.line_num,"当前内容",item)
@@ -28,7 +28,7 @@ class Create_Neo(object):
         with open(self.data_dir,'r',encoding='utf-8') as f:
             reader=csv.reader(f)
             for item in reader:
-                #第一行的标签不是咱们需要的内容，line_num表示文件的第几行
+                #过滤掉第一行，line_num表示文件的第几行
                 if reader.line_num==1:
                     continue
                 print("当前行数：",reader.line_num,"当前内容",item)
@@ -39,7 +39,7 @@ class Create_Neo(object):
             #数据集除了第一行代表属性外，第一列为实体1，第二列为实体2，第三列是两者英文关系，第四列为两者中文关系
             reader=csv.reader(f)
             for item in reader:
-                #第一行的标签不是咱们需要的内容，line_num表示文件的第几行
+                #line_num表示文件的第几行
                 if reader.line_num==1:
                     continue
                 print("当前行数：",reader.line_num,"当前内容",item)
@@ -54,7 +54,7 @@ class Create_Neo(object):
             reader=csv.reader(f)
             matcher = NodeMatcher(g)
             for item in reader:
-                #第一行的标签不是咱们需要的内容，line_num表示文件的第几行
+                #过滤掉第一行，line_num表示文件的第几行
                 if reader.line_num==1:
                     continue
                 print("当前行数：",reader.line_num,"当前内容",item)
@@ -68,7 +68,7 @@ class Create_Neo(object):
             #数据集除了第一行代表属性外，第一列为实体1，第二列为实体2，第三列是两者英文关系，第四列为两者中文关系
             reader=csv.reader(f)
             for item in reader:
-                #第一行的标签不是咱们需要的内容，line_num表示文件的第几行
+                #过滤掉第一行，line_num表示文件的第几行
                 if reader.line_num==1:
                     continue
                 print("当前行数：",reader.line_num,"当前内容",item)
